@@ -4,7 +4,6 @@ from alumnos import (agregar_alumno, mostrar_alumnos, buscar_alumno,
                      modificar_alumno, expulsar_alumno)
 
 
-
 def menu():
     while True:
 
@@ -17,7 +16,6 @@ def menu():
         print("5. Expulsar alumno")
         print("6. Salir")
         print()
-
 
         opcion = input("Ingrese una opcion: ")
 

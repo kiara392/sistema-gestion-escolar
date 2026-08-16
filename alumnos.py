@@ -57,49 +57,54 @@ def modificar_alumno(datos):
         if alumno["DNI"] == dni_buscado:
 
             print("Alumno encontrado.")
-            print()
-            print("1. Nombre")
-            print("2. Apellido")
-            print("3. DNI")
-            print("4. Fecha de nacimiento")
-            print("5. Tutor")
-            print("6. Faltas")
-            print("7. Amonestaciones")
-            print("8. Notas")
 
-            opcion = input("Ingrese la opcion que desea modificar: ")
+            while True:
+                print()
+                print("1. Nombre")
+                print("2. Apellido")
+                print("3. DNI")
+                print("4. Fecha de nacimiento")
+                print("5. Tutor")
+                print("6. Faltas")
+                print("7. Amonestaciones")
+                print("8. Notas")
+                print("9. Salir al menu principal")
 
-            if opcion == "1":
-                alumno["Nombre"] = input("Ingrese el nuevo nombre: ")
+                opcion = input("Ingrese la opcion que desea modificar: ")
 
-            elif opcion == "2":
-                alumno["Apellido"] = input("Ingrese el nuevo apellido: ")
+                if opcion == "1":
+                    alumno["Nombre"] = input("Ingrese el nuevo nombre: ")
 
-            elif opcion == "3":
-                alumno["DNI"] = input("Ingrese el nuevo DNI: ")
+                elif opcion == "2":
+                    alumno["Apellido"] = input("Ingrese el nuevo apellido: ")
 
-            elif opcion == "4":
-                alumno["Fecha de nacimiento"] = input("Ingrese la nueva fecha de nacimiento: ")
+                elif opcion == "3":
+                    alumno["DNI"] = input("Ingrese el nuevo DNI: ")
 
-            elif opcion == "5":
-                alumno["Tutor"] = input("Ingrese el nuevo tutor: ")
+                elif opcion == "4":
+                    alumno["Fecha de nacimiento"] = input("Ingrese la nueva fecha de nacimiento: ")
 
-            elif opcion == "6":
-                alumno["Faltas"] = input("Ingrese la cantidad de faltas")
+                elif opcion == "5":
+                    alumno["Tutor"] = input("Ingrese el nuevo tutor: ")
 
-            elif opcion == "7":
-                alumno["Amonestaciones"] = input("Ingrese la cantidad de amonestaciones: ")
+                elif opcion == "6":
+                    alumno["Faltas"] = int(input("Ingrese la cantidad de faltas"))
 
-            elif opcion == "8":
-                alumno["Notas"] = input("Ingrese la nota: ")
-                
+                elif opcion == "7":
+                    alumno["Amonestaciones"] = int(input("Ingrese la cantidad de amonestaciones: "))
 
-            else:
-                print("Opcion incorrecta.")
-                return
+                elif opcion == "8":
+                    nota = float(input("Ingrese la nota: "))
+                    alumno["Notas"].append(nota)
+                elif opcion == "9":
+                    return
 
-            print("Datos modificados correctamente.")
-            return
+                else:
+                    print("Opcion incorrecta.")
+                    
+
+    print("Datos modificados correctamente.")
+        
 
     print("No se encontro un alumno con ese DNI.")
 
